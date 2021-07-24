@@ -8,6 +8,26 @@
       "type": "node",
       "name": "vscode-jest-tests",
       "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": [
+        "--runInBand",
+        "--watchAll=false"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "type": "node",
+        "name": "vscode-jest-tests",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      }
+    },
+    {
+      "type": "node",
+      "name": "vscode-jest-tests",
+      "request": "launch",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "args": [
         "--runInBand"
@@ -17,12 +37,6 @@
       "internalConsoleOptions": "neverOpen",
       "disableOptimisticBPs": true
     },
-    {
-      "type": "chrome",
-      "request": "launch",
-      "name": "Launch Chrome against localhost",
-      "url": "http://localhost:8080",
-      "webRoot": "${workspaceFolder}"
-    }
+    
   ]
 }
